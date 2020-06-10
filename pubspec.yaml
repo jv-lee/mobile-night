@@ -2,7 +2,7 @@ name: night
 description: 移动端夜色模式适配.
 version: 0.0.1
 author: jv-lee <china.jv.lee@gmail.com>
-homepage:
+homepage: https://github.com/jv-lee/mobile-night
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
