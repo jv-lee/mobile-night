@@ -12,6 +12,9 @@ import io.flutter.plugin.common.PluginRegistry.Registrar
 public class NightPlugin : FlutterPlugin, MethodCallHandler {
     override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         DarkModeTools.get(flutterPluginBinding.applicationContext)
+        if (!DarkModeTools.get().isSystemTheme()) {
+            DarkModeTools.get().updateNightTheme(DarkModeTools.get().isDarkTheme())
+        }
         val channel = MethodChannel(flutterPluginBinding.flutterEngine.dartExecutor, "night")
         channel.setMethodCallHandler(NightPlugin());
     }
