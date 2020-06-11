@@ -21,10 +21,10 @@ class Night {
   }
 
   static void updateSystemTheme(bool enable) async {
-    await _channel.invokeMethod("updateSystemTheme", enable);
+    await _channel.invokeMethod("updateSystemTheme", {"enable": enable});
   }
 
   static void updateNightTheme(bool enable) async {
-    await _channel.invokeMethod("updateNightTheme", enable);
+    await _channel.invokeMethod("updateNightTheme", {"enable": enable});
   }
 }
