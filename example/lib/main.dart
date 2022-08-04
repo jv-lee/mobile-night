@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-
 import 'package:flutter/services.dart';
 import 'package:night/night.dart';
 
@@ -12,43 +10,79 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  bool nightMode = false;
+  var isSystemTheme = false;
+  var isDarkTheme = false;
 
   @override
   void initState() {
     super.initState();
-    isDarkTheme();
+    changeState();
   }
 
-  // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> isDarkTheme() async {
-    bool mode;
-    // Platform messages may fail, so we use a try/catch PlatformException.
+  void changeState() async {
     try {
-      mode = await Night.isDarkTheme();
-    } on PlatformException {
-      mode = false;
-    }
+      isSystemTheme = await Night.isSystemTheme();
+      isDarkTheme = await Night.isDarkTheme();
+      setState(() {});
+    } on PlatformException {}
 
     // If the widget was removed from the tree while the asynchronous platform
     // message was in flight, we want to discard the reply rather than calling
     // setState to update our non-existent appearance.
     if (!mounted) return;
+  }
 
-    setState(() {
-      nightMode = mode;
-    });
+  void switchSystem(enable) {
+    Night.updateSystemTheme(enable);
+    changeState();
+  }
+
+  void switchNight(enable) async {
+    final isSystem = await Night.isSystemTheme();
+    if (!isSystem) {
+      Night.updateNightTheme(enable);
+      changeState();
+    }
   }
 
   @override
   Widget build(BuildContext context) {
+    final backgroundColor = isDarkTheme ? Colors.black : Colors.white;
+    final textColor = isDarkTheme ? Colors.white : Colors.black;
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: backgroundColor,
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running NightMode on: $nightMode\n'),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('isSystem on: $isSystemTheme',
+                  style: TextStyle(color: textColor)),
+              Text('isDark on: $isDarkTheme',
+                  style: TextStyle(color: textColor)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("跟随系统:", style: TextStyle(color: textColor)),
+                  Switch(
+                      value: isSystemTheme,
+                      onChanged: (enable) => switchSystem(enable))
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("深色模式:", style: TextStyle(color: textColor)),
+                  Switch(
+                      value: isDarkTheme,
+                      onChanged: (enable) => switchNight(enable))
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
