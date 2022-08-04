@@ -12,22 +12,22 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int nightMode = 404;
+  bool nightMode = false;
 
   @override
   void initState() {
     super.initState();
-    initModeCode();
+    isDarkTheme();
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initModeCode() async {
-    int mode;
+  Future<void> isDarkTheme() async {
+    bool mode;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      mode = await Night.getDefaultNightMode;
+      mode = await Night.isDarkTheme();
     } on PlatformException {
-      mode = -400;
+      mode = false;
     }
 
     // If the widget was removed from the tree while the asynchronous platform
@@ -48,7 +48,7 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running on: $nightMode\n'),
+          child: Text('Running NightMode on: $nightMode\n'),
         ),
       ),
     );

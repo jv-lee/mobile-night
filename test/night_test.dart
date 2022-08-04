@@ -17,7 +17,7 @@ void main() {
     channel.setMockMethodCallHandler(null);
   });
 
-  test('getDefaultNightMode', () async {
-    print(await Night.getDefaultNightMode);
+  test('isDarkTheme', () async {
+    print(await Night.isDarkTheme());
   });
 }
