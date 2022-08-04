@@ -11,10 +11,7 @@ import io.flutter.plugin.common.PluginRegistry.Registrar
 /** DarkPlugin */
 public class NightPlugin : FlutterPlugin, MethodCallHandler {
     override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-        DarkModeTools.get(flutterPluginBinding.applicationContext)
-        if (!DarkModeTools.get().isSystemTheme()) {
-            DarkModeTools.get().updateNightTheme(DarkModeTools.get().isDarkTheme())
-        }
+        DarkModeTools.init(flutterPluginBinding.applicationContext)
         val channel = MethodChannel(flutterPluginBinding.flutterEngine.dartExecutor, "night")
         channel.setMethodCallHandler(NightPlugin());
     }
@@ -38,7 +35,6 @@ public class NightPlugin : FlutterPlugin, MethodCallHandler {
 
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         when (call.method) {
-            "getDefaultNightMode" -> result.success(DarkModeTools.get().getDefaultNightMode())
             "isSystemTheme" -> result.success(DarkModeTools.get().isSystemTheme())
             "isDarkTheme" -> result.success(DarkModeTools.get().isDarkTheme())
             "updateSystemTheme" -> DarkModeTools.get().updateSystemTheme(call.argument<Boolean>("enable")!!)
