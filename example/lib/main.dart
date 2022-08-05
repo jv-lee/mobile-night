@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
   void switchNight(enable) async {
     final isSystem = await Night.isSystemTheme();
     if (!isSystem) {
-      Night.updateNightTheme(enable);
+      Night.updateDarkTheme(enable);
       changeState();
     }
   }
