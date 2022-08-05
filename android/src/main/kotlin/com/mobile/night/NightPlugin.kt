@@ -27,7 +27,7 @@ public class NightPlugin : FlutterPlugin, MethodCallHandler {
             "isSystemTheme" -> result.success(DarkModeTools.get().isSystemTheme())
             "isDarkTheme" -> result.success(DarkModeTools.get().isDarkTheme())
             "updateSystemTheme" -> DarkModeTools.get().updateSystemTheme(call.argument<Boolean>("enable")!!)
-            "updateDarkTheme" -> DarkModeTools.get().updateNightTheme(call.argument<Boolean>("enable")!!)
+            "updateDarkTheme" -> DarkModeTools.get().updateDarkTheme(call.argument<Boolean>("enable")!!)
             else -> result.notImplemented()
         }
     }
