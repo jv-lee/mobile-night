@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea91a233-dbed-47fc-9cf7-79b4f0edb33b" name="Default Changelist" comment="add version 0.0.6">
+    <list default="true" id="ea91a233-dbed-47fc-9cf7-79b4f0edb33b" name="Default Changelist" comment="update version to 0.0.7">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/mobile/night/DarkModeTools.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/mobile/night/DarkModeTools.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +149,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659680483421</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add version 0.0.7 , update android DarkModeTools.kt code.">
+      <created>1660634942308</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1660634942308</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update version to 0.0.7">
+      <created>1660635072539</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1660635072539</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -177,6 +190,8 @@
     <MESSAGE value="add night 0.0.5 version." />
     <MESSAGE value="update code." />
     <MESSAGE value="add version 0.0.6" />
-    <option name="LAST_COMMIT_MESSAGE" value="add version 0.0.6" />
+    <MESSAGE value="add version 0.0.7 , update android DarkModeTools.kt code." />
+    <MESSAGE value="update version to 0.0.7" />
+    <option name="LAST_COMMIT_MESSAGE" value="update version to 0.0.7" />
   </component>
 </project>
