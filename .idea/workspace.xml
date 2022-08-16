@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea91a233-dbed-47fc-9cf7-79b4f0edb33b" name="Default Changelist" comment="add night 0.0.5 version.">
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+    <list default="true" id="ea91a233-dbed-47fc-9cf7-79b4f0edb33b" name="Default Changelist" comment="add version 0.0.6">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/mobile/night/DarkModeTools.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/mobile/night/DarkModeTools.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +136,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659679989042</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update code.">
+      <created>1659680327273</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1659680327273</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add version 0.0.6">
+      <created>1659680483421</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1659680483421</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,8 +174,9 @@
     <MESSAGE value="update plugin code." />
     <MESSAGE value="update night app demo." />
     <MESSAGE value="add ios dark mode plugin code." />
-    <MESSAGE value="update code." />
     <MESSAGE value="add night 0.0.5 version." />
-    <option name="LAST_COMMIT_MESSAGE" value="add night 0.0.5 version." />
+    <MESSAGE value="update code." />
+    <MESSAGE value="add version 0.0.6" />
+    <option name="LAST_COMMIT_MESSAGE" value="add version 0.0.6" />
   </component>
 </project>
