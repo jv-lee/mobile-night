@@ -1,6 +1,6 @@
 name: night
 description: 移动端夜色模式适配.
-version: 0.0.6
+version: 0.0.7
 homepage: https://github.com/jv-lee/mobile-night
 
 environment:
